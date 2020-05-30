@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="red.Registrar" 
+             Title="Registrar">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1"  Padding="30,20" >
+                    
+                    <Label Text="Nombre:"/>
+                    <Entry x:Name="EntNombre" Placeholder="Nombre..." PlaceholderColor="Gray" TextColor="Black"></Entry>
+
+                    <Label Text="Apellido:"/>
+                    <Entry x:Name="EntApellido" Placeholder="Apellido..." PlaceholderColor="Gray" TextColor="Black"></Entry>
+
+                    <Label Text="E-mail:"/>
+                    <Entry x:Name="EntEmail" Placeholder="E-mail..." PlaceholderColor="Gray" TextColor="Black"></Entry>
+                    
+                    <Label Text="Contraseña:"/>
+                    <Entry x:Name="Entpassword" Placeholder="Contraseña..." PlaceholderColor="Gray" TextColor="Black" IsPassword="True"></Entry>
+
+                    <Label Text="Confirmar Contraseña:"/>
+                    <Entry x:Name="EntConfPassword" Placeholder="confirmar Contraseña..." PlaceholderColor="Gray" TextColor="Black" IsPassword="True"></Entry>
+                    
+                  
+                    <Button x:Name="btnRegistrar" Text="Registarr" Clicked="btnRegistrar_Clicked" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                    <Button x:Name="btnVolver" Text="Volver" Clicked="btnVolver_Clicked" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7" ></Button>
+                   
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="red.opciones"
+             Title="opcione">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+               
+                <StackLayout Grid.Row="1"  Padding="30,180" >
+
+                    <Button x:Name="BtnPublicaciones" Text="PUBLICACIONES" Clicked="BtnPublicaciones_Clicked"  Margin="0,50,0,30" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                    <Button x:Name="BtnPublicar" Text="PUBLICAR" Clicked="BtnPublicar_Clicked"  Margin="0,50,0,30" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                    <Button x:Name="BtnBuscraA" Text="BUSCAR AMIGO" Clicked="BtnBuscraA_Clicked"  Margin="0,50,0,30" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

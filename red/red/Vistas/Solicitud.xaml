@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="red.Solicitud">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1"  Padding="10,20" >
+                    <StackLayout Orientation="Horizontal">
+                        <Image Grid.Row="0" Source="i144.png" WidthRequest="60" HeightRequest="60" Margin="0,8,0,20" BackgroundColor="black" />
+                        <StackLayout>
+                            <Label Text="Nombre usuario"  Margin="5,5"/>
+                            <Label Text="Apellido usuario" Margin="5,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="agregar" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                        <Button HorizontalOptions="EndAndExpand" Text="Eliminar" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                    </StackLayout>
+                    <Button Text="Volver" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+
+                </StackLayout>
+                
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

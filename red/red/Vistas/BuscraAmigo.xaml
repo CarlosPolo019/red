@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="red.BuscraAmigo">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1"  Padding="10,20" >
+                    <StackLayout Orientation="Horizontal">
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Buscar Amigo..." PlaceholderColor="Gray" TextColor="Black"></Entry>
+                        <Button HorizontalOptions="EndAndExpand" Text="Buscar" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1"  Padding="10,20">
+                        <ListView>
+                            <ListView.ItemsSource>
+                                <x:Array Type="{x:Type x:String}" >
+                                    <x:String>Hello</x:String>
+                                    <x:String>Word</x:String>
+                                    <x:String>In</x:String>
+                                    <x:String>Barranquilla</x:String>
+                                </x:Array>
+                            </ListView.ItemsSource>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+                
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

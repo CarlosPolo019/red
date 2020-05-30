@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="red.Loginpage"
+             Title="login">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="i144.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30" />
+                <StackLayout Grid.Row="1"  Padding="30,20" >
+                    <Entry x:Name="EntEmail" Placeholder="E-mail..." PlaceholderColor="Gray" TextColor="Black"></Entry>
+                    <Entry x:Name="EntPasword" Placeholder="Password..." PlaceholderColor="Gray" TextColor="Black" IsPassword="True"></Entry>
+                    <Button x:Name="BtnIngresar" Text="Ingresar" Clicked="BtnIngresar_Clicked" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                    <Button x:Name="BtnRegistrar" Text="Regitrar" Clicked="BtnRegistrar_Clicked" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+                   
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

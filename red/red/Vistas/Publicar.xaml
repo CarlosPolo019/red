@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="red.Publicar"
+             Title="publicar">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="1"  Padding="30,80" >
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="userimg.jpg" WidthRequest="50"/>
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="LblNombreCompleto" Text=""/>
+                            <Label x:Name="LblFecha" Text=""/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Label x:Name="lbltipop" Text="Tipo de publicacion"></Label>
+                    <Picker x:Name="PkTipo" ></Picker>
+                    <Label Text="Descripcion"/>
+                    <Editor x:Name="EntDescripcion" Placeholder="Escribe aqui tu texto...." PlaceholderColor="Gray" TextColor="Black" AutoSize="TextChanges" MaxLength="300"></Editor>
+                    <Button x:Name="BtnPublicar" Text="PUBLICAR" Clicked="BtnPublicar_Clicked"  Margin="0,50,0,30" BackgroundColor="Gray" TextColor="#1e14ff" BorderRadius="21" Opacity="0.7"></Button>
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+    
+</ContentPage>
