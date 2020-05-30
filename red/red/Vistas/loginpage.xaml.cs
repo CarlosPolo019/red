@@ -8,14 +8,20 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace red
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Loginpage : ContentPage
     {
+    
+      HttpClient client;
+
+    
         public Loginpage()
         {
             InitializeComponent();
+    client = new HttpClient ();
 
 
         }
@@ -79,6 +85,19 @@ namespace red
         {
             Navigation.PushModalAsync(new Registrar());
         }
+        
+        public async Task<List<TodoItem>> RefreshDataAsync ()
+        {
+  
+  Uri uri = new Uri (string.Format("http://socialapi.freevar.com/api/listarUsuarios.php", string.Empty));
+
+  HttpResponseMessage response = await client.GetAsync (uri);
+  if (response.IsSuccessStatusCode)
+  {
+      string content = await response.Content.ReadAsStringAsync ();
+      Items = JsonConvert.DeserializeObject <List<TodoItem>> (content);
+    }
+     }
 
       
     }
